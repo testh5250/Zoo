@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1024.0" styleClass="visitorBackground" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="H5250_project.controller.SuperAdminProfileController">
+    <children>
+        <TabPane fx:id="tabs" layoutY="112.0" prefHeight="608.0" prefWidth="1024.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab>
+                    <graphic>
+                        <HBox fillHeight="false" prefHeight="36.0" prefWidth="115.0">
+                            <children>
+                                <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="visitorTab">
+                                    <image>
+                                        <Image url="@../../img/icons8-lion-filled-100.png" />
+                                    </image>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Departments" textAlignment="CENTER" wrappingWidth="132.126953125">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                    </graphic>
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <AnchorPane fx:id="departmentPane" prefHeight="620.0" prefWidth="839.0" style="-fx-background-color: #1d1d1d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <GridPane layoutX="56.0" layoutY="41.0" prefHeight="240.0" prefWidth="250.0" style="-fx-background-color: rgba(127,127,127,0.5);">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="124.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="126.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="                    Birds" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="Department" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="       Ticket Price:" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="birdPrice" prefHeight="28.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#showBirds" prefHeight="28.0" prefWidth="137.0" text="Animals" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#showBirdKeepers" prefHeight="28.0" prefWidth="137.0" text="ZooKeepers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#birdTickets" prefHeight="28.0" prefWidth="137.0" text="Tickets" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#saveBirdPrice" prefHeight="28.0" prefWidth="137.0" style="-fx-background-color: white;" text="SaveChanges" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="515.0" layoutY="41.0" prefHeight="240.0" prefWidth="250.0" style="-fx-background-color: rgba(127,127,127,0.5);">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="124.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="126.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="                      Wild" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="Department" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="       Ticket Price:" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="wildPrice" prefHeight="28.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#showWilds" prefHeight="28.0" prefWidth="137.0" text="Animals" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#showWildKeepers" prefHeight="28.0" prefWidth="137.0" text="ZooKeepers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#wildTickets" prefHeight="28.0" prefWidth="137.0" text="Tickets" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#saveWildPrice" prefHeight="28.0" prefWidth="137.0" style="-fx-background-color: white;" text="SaveChanges" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="290.0" layoutY="329.0" prefHeight="240.0" prefWidth="250.0" style="-fx-background-color: rgba(127,127,127,0.5);">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="124.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="126.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="               Aquatic" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="Department" textFill="WHITE" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="18.0" prefWidth="120.0" text="       Ticket Price:" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="aquaticPrice" prefHeight="28.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button mnemonicParsing="false" onAction="#showAquatics" prefHeight="28.0" prefWidth="137.0" text="Animals" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#showAquaKeepers" prefHeight="28.0" prefWidth="137.0" text="ZooKeepers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#aquaTickets" prefHeight="28.0" prefWidth="137.0" text="Tickets" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#saveAquaticPrice" prefHeight="28.0" prefWidth="137.0" style="-fx-background-color: white;" text="SaveChanges" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="birdsPane" prefHeight="620.0" prefWidth="839.0">
+                           <children>
+                              <ScrollPane fx:id="birds" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="birdsTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Birds Yet! Click below to add Birds!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="birdName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="birdNationalID" prefWidth="75.0" text="National Id" />
+                                                <TableColumn fx:id="birdNationality" prefWidth="75.0" text="Nationality" />
+                                                <TableColumn fx:id="birdFood" prefWidth="75.0" text="Food" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideBirds" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditBird" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteBird" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewBird" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="birdDetails" layoutX="1.0" layoutY="1.0" prefHeight="608.0" prefWidth="830.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="254.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="National Id" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Nationality" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Sex" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Insurance" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <TextField fx:id="birdNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="birdNationalIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="birdNationalityField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <ChoiceBox fx:id="birdSex" prefHeight="28.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="birdInsurance" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Food" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="birdFoodField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Wild" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <CheckBox fx:id="birdWild" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="birdOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="birdCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="birdKeepersPane">
+                           <children>
+                              <ScrollPane fx:id="birdKeepers" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="birdKeepersTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Zookeepers Yet! Click below to add Zookeepers!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="birdKeeperName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="birdKeeperLastName" prefWidth="75.0" text="Last Name" />
+                                                <TableColumn fx:id="birdKeeperWage" prefWidth="75.0" text="Wage" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideBirdKeepers" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditBirdKeeper" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteBirdKeeper" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewBirdKeeper" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="birdKeeperDetails" layoutX="-1.0" layoutY="1.0" prefHeight="608.0" prefWidth="832.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="278.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Last Name" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="User Name" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Email" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Address" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <TextField fx:id="birdKeeperNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="birdKeeperLastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="birdKeeperUserField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Password" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="birdKeeperPassField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="127.0" text="Phone Number" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <Label text="Wage" textFill="WHITE" GridPane.rowIndex="7" />
+                                          <TextField fx:id="birdKeeperMailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="birdKeeperPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="birdKeeperAddressField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField fx:id="birdKeeperWageField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="birdKeeperOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="birdKeeperCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="wildsPane" layoutX="-1.0" layoutY="1.0" prefHeight="620.0" prefWidth="841.0">
+                           <children>
+                              <ScrollPane fx:id="wilds" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="wildsTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Wild Animals Yet! Click below to add them!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="wildName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="wildNationalID" prefWidth="75.0" text="National Id" />
+                                                <TableColumn fx:id="wildNationality" prefWidth="75.0" text="Nationality" />
+                                                <TableColumn fx:id="wildFood" prefWidth="75.0" text="Food" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideWilds" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditWild" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteWild" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewWild" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="wildDetails" layoutY="-12.0" prefHeight="621.0" prefWidth="831.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="254.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="National Id" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Nationality" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Sex" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Insurance" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <TextField fx:id="wildNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="wildNationalIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="wildNationalityField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <ChoiceBox fx:id="wildSex" prefHeight="28.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <CheckBox fx:id="wildInsurance" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Food" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="wildFoodField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Home" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <TextField fx:id="wildHomeField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="wildOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="wildCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="wildKeepersPane">
+                           <children>
+                              <ScrollPane fx:id="wildKeepers" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="wildKeepersTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Zookeepers Yet! Click below to add Zookeepers!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="wildKeeperName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="wildKeeperLastName" prefWidth="75.0" text="Last Name" />
+                                                <TableColumn fx:id="wildKeeperWage" prefWidth="75.0" text="Wage" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideWildKeepers" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditWildKeeper" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteWildKeeper" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewWildKeeper" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="wildKeeperDetails" layoutX="-1.0" layoutY="-9.0" prefHeight="618.0" prefWidth="832.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="278.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Last Name" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="User Name" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Email" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Address" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <TextField fx:id="wildKeeperNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="wildKeeperLastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="wildKeeperUserField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Password" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="wildKeeperPassField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="127.0" text="Phone Number" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <Label text="Wage" textFill="WHITE" GridPane.rowIndex="7" />
+                                          <TextField fx:id="wildKeeperMailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="wildKeeperPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="wildKeeperAddressField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField fx:id="wildKeeperWageField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="wildKeeperOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="wildKeeperCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="aquaticsPane" prefHeight="620.0" prefWidth="841.0">
+                           <children>
+                              <ScrollPane fx:id="aquatics" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="aquaticsTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Wild Animals Yet! Click below to add them!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="aquaticName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="aquaticNationalID" prefWidth="75.0" text="National Id" />
+                                                <TableColumn fx:id="aquaticNationality" prefWidth="75.0" text="Nationality" />
+                                                <TableColumn fx:id="aquaticFood" prefWidth="75.0" text="Food" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideAquatics" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditAquatic" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteAquatic" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewAquatic" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="aquaticDetails" layoutY="-12.0" prefHeight="621.0" prefWidth="831.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="254.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="National Id" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Nationality" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Sex" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Insurance" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <TextField fx:id="aquaticNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="aquaticNationalIdField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="aquaticNationalityField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <ChoiceBox fx:id="aquaticSex" prefHeight="28.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="aquaticInsurance" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Food" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="aquaticFoodField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Carnivorous" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <CheckBox fx:id="aquaticCarnivorous" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="aquaticOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="aquaticCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="aquaKeepersPane">
+                           <children>
+                              <ScrollPane fx:id="aquaKeepers" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                                 <content>
+                                    <VBox prefHeight="609.0" prefWidth="829.0">
+                                       <children>
+                                          <TableView fx:id="aquaKeepersTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                             <placeholder>
+                                                <Label text="No Zookeepers Yet! Click below to add Zookeepers!">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Label>
+                                             </placeholder>
+                                             <columns>
+                                                <TableColumn fx:id="aquaKeeperName" prefWidth="75.0" text="Name" />
+                                                <TableColumn fx:id="aquaKeeperLastName" prefWidth="75.0" text="Last Name" />
+                                                <TableColumn fx:id="aquaKeeperWage" prefWidth="75.0" text="Wage" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                             <buttons>
+                                                <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideAquaKeepers" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditAquaKeeper" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteAquaKeeper" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewAquaKeeper" prefHeight="28.0" styleClass="guestButton" text="New">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                             </buttons>
+                                             <padding>
+                                                <Insets bottom="20.0" right="229.0" />
+                                             </padding>
+                                          </ButtonBar>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane fx:id="aquaKeeperDetails" layoutX="-1.0" layoutY="-9.0" prefHeight="618.0" prefWidth="832.0" style="-fx-background-color: #1d1d1d;">
+                                 <children>
+                                    <GridPane layoutX="176.0" layoutY="107.0" prefHeight="278.0" prefWidth="404.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label text="Name" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Last Name" textFill="WHITE" GridPane.rowIndex="1" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="User Name" textFill="WHITE" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="55.0" text="Email" textFill="WHITE" GridPane.rowIndex="4" />
+                                          <Label prefHeight="18.0" prefWidth="90.0" text="Address" textFill="WHITE" GridPane.rowIndex="6" />
+                                          <TextField fx:id="aquaKeeperNameField" GridPane.columnIndex="1" />
+                                          <TextField fx:id="aquaKeeperLastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="aquaKeeperUserField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label prefHeight="18.0" prefWidth="76.0" text="Password" textFill="WHITE" GridPane.rowIndex="3" />
+                                          <TextField fx:id="aquaKeeperPassField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label prefHeight="18.0" prefWidth="127.0" text="Phone Number" textFill="WHITE" GridPane.rowIndex="5" />
+                                          <Label text="Wage" textFill="WHITE" GridPane.rowIndex="7" />
+                                          <TextField fx:id="aquaKeeperMailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <TextField fx:id="aquaKeeperPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <TextField fx:id="aquaKeeperAddressField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <TextField fx:id="aquaKeeperWageField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                       </children>
+                                    </GridPane>
+                                    <ButtonBar layoutX="310.0" layoutY="415.0">
+                                       <buttons>
+                                          <Button fx:id="aquaKeeperOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                          <Button fx:id="aquaKeeperCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                       </buttons>
+                                    </ButtonBar>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane fx:id="tickets" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                           <content>
+                              <VBox prefHeight="609.0" prefWidth="829.0">
+                                 <children>
+                                    <TableView fx:id="ticketsTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                       <placeholder>
+                                          <Label text="No tickets bought yet!">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </placeholder>
+                                       <columns>
+                                          <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+                                          <TableColumn fx:id="visitorColumn" prefWidth="75.0" text="Visitor" />
+                                          <TableColumn fx:id="countColumn" prefWidth="75.0" text="Count" />
+                                          <TableColumn fx:id="zookeeperColumn" prefWidth="75.0" text="Zookeeper" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                       <buttons>
+                                          <Button minWidth="54.0" mnemonicParsing="false" onAction="#hideTickets" prefHeight="32.0" styleClass="guestButton" text="Back">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </buttons>
+                                       <padding>
+                                          <Insets bottom="20.0" right="35.0" />
+                                       </padding>
+                                    </ButtonBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+                </Tab>
+            <Tab>
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <ScrollPane fx:id="managers" pannable="true" prefHeight="621.0" prefWidth="840.0">
+                           <content>
+                              <VBox prefHeight="609.0" prefWidth="829.0">
+                                 <children>
+                                    <TableView fx:id="managersTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                       <placeholder>
+                                          <Label text="No Zookeepers Yet! Click below to add Zookeepers!">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </placeholder>
+                                       <columns>
+                                          <TableColumn fx:id="managerName" prefWidth="75.0" text="Name" />
+                                          <TableColumn fx:id="managerLastName" prefWidth="75.0" text="Last Name" />
+                                          <TableColumn fx:id="managerWage" prefWidth="75.0" text="Wage" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <ButtonBar prefHeight="60.0" prefWidth="71.0" style="-fx-background-color: #1d1d1d;">
+                                       <buttons>
+                                          <Button layoutX="350.0" layoutY="26.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleEditManager" prefHeight="28.0" styleClass="guestButton" text="Show/Edit">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="288.0" layoutY="14.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleDeleteManager" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="336.0" layoutY="16.0" minWidth="40.0" mnemonicParsing="false" onAction="#handleNewManager" prefHeight="28.0" styleClass="guestButton" text="New">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </buttons>
+                                       <padding>
+                                          <Insets bottom="20.0" right="275.0" />
+                                       </padding>
+                                    </ButtonBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane fx:id="managerDetails" layoutX="-1.0" layoutY="1.0" prefHeight="608.0" prefWidth="832.0" style="-fx-background-color: #1d1d1d;">
+                           <children>
+                              <GridPane layoutX="176.0" layoutY="107.0" prefHeight="278.0" prefWidth="404.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Name" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Last Name" textFill="WHITE" GridPane.rowIndex="1" />
+                                    <Label prefHeight="18.0" prefWidth="76.0" text="User Name" textFill="WHITE" GridPane.rowIndex="2" />
+                                    <Label prefHeight="18.0" prefWidth="55.0" text="Email" textFill="WHITE" GridPane.rowIndex="4" />
+                                    <Label prefHeight="18.0" prefWidth="90.0" text="Address" textFill="WHITE" GridPane.rowIndex="6" />
+                                    <TextField fx:id="managerNameField" GridPane.columnIndex="1" />
+                                    <TextField fx:id="managerLastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="managerUserField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label prefHeight="18.0" prefWidth="76.0" text="Password" textFill="WHITE" GridPane.rowIndex="3" />
+                                    <TextField fx:id="managerPassField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label prefHeight="18.0" prefWidth="127.0" text="Phone Number" textFill="WHITE" GridPane.rowIndex="5" />
+                                    <Label text="Wage" textFill="WHITE" GridPane.rowIndex="7" />
+                                    <TextField fx:id="managerMailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="managerPhoneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="managerAddressField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="managerWageField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                              </GridPane>
+                              <ButtonBar layoutX="310.0" layoutY="415.0">
+                                 <buttons>
+                                    <Button fx:id="managerOK" defaultButton="true" mnemonicParsing="false" text="OK" />
+                                    <Button fx:id="managerCancel" mnemonicParsing="false" prefWidth="120.0" text="Cancel" />
+                                 </buttons>
+                              </ButtonBar>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <HBox fillHeight="false" prefHeight="15.0" prefWidth="171.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="visitorTab">
+                           <image>
+                              <Image url="@../../img/icons8-people-filled-100.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Managers" textAlignment="CENTER" wrappingWidth="134.126953125">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Tab>
+            <Tab>
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <ScrollPane pannable="true" prefHeight="626.0" prefWidth="861.0">
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <TableView fx:id="messagesTable" prefHeight="549.0" prefWidth="829.0" tableMenuButtonVisible="true">
+                                       <placeholder>
+                                          <Label text="You Have No Messages!">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </placeholder>
+                                       <columns>
+                                          <TableColumn fx:id="messagesColumn" prefWidth="75.0" text="Messages:" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <ButtonBar prefHeight="60.0" prefWidth="829.0" style="-fx-background-color: #1d1d1d;">
+                                       <buttons>
+                                          <Button minWidth="40.0" mnemonicParsing="false" onAction="#deleteMessage" prefHeight="28.0" styleClass="guestButton" text="Delete">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </buttons>
+                                       <padding>
+                                          <Insets bottom="20.0" right="370.0" />
+                                       </padding>
+                                    </ButtonBar>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <HBox fillHeight="false" prefHeight="15.0" prefWidth="171.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="visitorTab">
+                           <image>
+                              <Image url="@../../img/icons8-new-post-26.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Messages" textAlignment="CENTER" wrappingWidth="134.126953125">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Tab>
+            <Tab>
+               <graphic>
+                  <HBox fillHeight="false" prefHeight="36.0" prefWidth="115.0">
+                     <children>
+                        <ImageView fitHeight="36.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" styleClass="visitorTab">
+                           <image>
+                              <Image url="@../../img/settings-filled.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" wrappingWidth="96.126953125">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </graphic>
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <GridPane layoutX="197.0" layoutY="232.0" prefHeight="155.0" prefWidth="404.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="111.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="261.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="18.0" prefWidth="55.0" text="Old Pass" GridPane.rowIndex="1" />
+                              <Label text="New Pass" GridPane.rowIndex="2" />
+                              <Label prefHeight="18.0" prefWidth="119.0" text="Confirm Pass" GridPane.rowIndex="3" />
+                              <PasswordField fx:id="oldPass" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <PasswordField fx:id="newPass" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <PasswordField fx:id="confirmPass" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label layoutX="10.0" layoutY="17.0" text="Email" />
+                              <TextField fx:id="mailField" layoutX="137.0" layoutY="76.0" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <ButtonBar layoutX="274.0" layoutY="149.0" />
+                        <Button defaultButton="true" layoutX="314.0" layoutY="428.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="28.0" prefWidth="287.0" text="Save Changes" />
+                          <Button layoutX="752.0" layoutY="567.0" mnemonicParsing="false" onAction="#logout" text="LogOut" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+        <Label layoutX="41.0" layoutY="32.0" prefHeight="32.0" prefWidth="139.0" style="-fx-text-fill: #3e4b60;" text="Zoo! By:H5250" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="339.0" layoutY="36.0" prefHeight="25.0" prefWidth="120.0" text="SuperAdmin">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+      <Label fx:id="income" layoutX="719.0" layoutY="36.0" prefHeight="25.0" prefWidth="242.0" text="Income:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="SuperLogin" layoutX="-1.0" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: black;">
+         <children>
+            <Button layoutX="27.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="41.0" prefWidth="41.0" styleClass="backButton" stylesheets="@Theme.css" />
+            <Button layoutX="466.0" layoutY="382.0" mnemonicParsing="false" onAction="#superLogin" text="Super Login" />
+            <TextField fx:id="superUserField" layoutX="431.0" layoutY="297.0" promptText="SUPER User" />
+            <PasswordField fx:id="superPassField" layoutX="431.0" layoutY="332.0" promptText="passWord" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

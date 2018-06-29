@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1024.0" minHeight="720.0" minWidth="1024.0" prefHeight="720.0" prefWidth="1024.0" styleClass="welcomeBackground" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="H5250_project.controller.WelcomeFormController">
+   <children>
+      <ButtonBar layoutX="810.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" stylesheets="@Theme.css">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleStaff" styleClass="welcomeButton" stylesheets="@Theme.css" text="Staff">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button layoutX="125.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleLogin" styleClass="welcomeButton" stylesheets="@Theme.css" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+      <VBox layoutY="561.0" opacity="0.25" prefHeight="160.0" prefWidth="1025.0" style="-fx-background-color: black;" />
+      <Label layoutX="410.0" layoutY="580.0" text="Welcome to the Zoo!">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="409.0" layoutY="609.0" text="If you are new click below">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="476.0" layoutY="641.0" mnemonicParsing="false" onAction="#handleSignUp" style="-fx-border-width: 2 2 2 2;" styleClass="welcomeButton" stylesheets="@Theme.css" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="31.0" layoutY="22.0" prefHeight="32.0" prefWidth="139.0" style="-fx-text-fill: #3e4b60;" text="Zoo! By:H5250" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="495.0" layoutY="371.0" mnemonicParsing="false" onAction="#superAdmin" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
